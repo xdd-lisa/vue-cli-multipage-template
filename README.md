@@ -2,15 +2,15 @@ vue-Multipage
 
 ## 主要功能
 
- 1. 支持字体图标,css分离打包
- 2. 各入口文件分离打包,第三方库模块打包,公共组件分离打包
- 3. 支持vue-router路由按需加载
- 4. 可自定义页面入口模块名
- 5. 整合了UI框架，`vuxui2.x`，`mint-ui`(弹窗提示使用的mint-ui,不用可不引入)
- 6. 基于`webpack2`，全面支持`ES6 Modules`
- 7. 热更新
- 8. 支持`Less`css预处理,`Sass`css预处理
- 9. 全局注册vue全局过滤器的方法 
+  1. 支持字体图标,css分离打包
+  2. 各入口文件分离打包,第三方库模块打包,公共组件分离打包
+  3. 支持vue-router路由按需加载
+  4. 可自定义页面入口模块名
+  5. 整合了UI框架，`vuxui2.x`，`mint-ui`(弹窗提示使用的mint-ui,不用可不引入)
+  6. 基于`webpack2`，全面支持`ES6 Modules`
+  7. 热更新
+  8. 支持`Less`css预处理,`Sass`css预处理
+  9. 全局注册vue全局过滤器的方法 
 
 ## Build Setup
 
@@ -60,7 +60,7 @@ webpack
         |---app.vue
 ......
 
-  ```
+```
 
 例如 http:// localhost:1234/`page`/list.html，`page`就是我们线上的模块名，如需修改请到项目目录文件config/index.js修改`moduleName`参数，修改这里的配置的同时，也要同时重命名`/src/page`的这个文件夹名称，是否会报错的。
 
@@ -78,6 +78,14 @@ webpack
 此时如果如果页面基准是`750`,者如果PSD图大小`100px`, 字号大小`32`,则代码编写为 `width:50px; font-size:16px`
 
 编译结果`width` 转为了`rem` , `font-size` 保持`16px`不变
+
+```
+我自己添加的：
+相当于如果在320px的屏下width：100px ,那么我代码的宽度应该写成：width:100/32rem;
+如果在640px的屏下width：100px ,那么我代码的宽度应该写成：width:100/64rem;
+```
+
+
 
 ## common.js库使用
 
