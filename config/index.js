@@ -2,10 +2,8 @@
 var path = require('path')
 
 module.exports = {
-
   //网站模块名，默认为page，修改这里的配置的同时，也要同时重命名/src/page的这个文件夹名称
   moduleName:'page',
-
   build: {
     env: require('./prod.env'),
     index: path.resolve(__dirname, '../dist/index.html'),
@@ -27,7 +25,7 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    port: 1234,
+    port: 8080,
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
